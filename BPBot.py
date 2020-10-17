@@ -8,8 +8,10 @@ Created by Colin Lindsay
 https://clindsay107@github.com/clindsay107/BPBot.git
 '''
 
+#importing Modules
 import ssl, socket, re, sys
 from modules import *
+#in line 13 import * is importing everything from modules
 
 #variables for server connection
 server = config.server
@@ -31,12 +33,12 @@ setNick(s)
 identify(s)
 
 if not setUp():#do database setup
-	print '>>>Problem setting up database!'
+	print ('>>>Problem setting up database!')
 
 #Receive input until we are in the channel
 while not inChan:
 	line = readLine(s)
-	print line
+	print (line)
 	line = line.split() #parse the line for codes
 	try:
 		if len(line) <= 1: #ignore blank lines, should be handled better...
@@ -58,5 +60,5 @@ while not inChan:
 
 while inChan:
 	line = readLine(s)
-	print line
+	print (line)
 	parseLine(s, line)
