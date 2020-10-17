@@ -8,8 +8,10 @@ Created by Colin Lindsay
 https://clindsay107@github.com/clindsay107/BPBot.git
 '''
 
+#importing Modules
 import ssl, socket, re, sys
 from modules import *
+#in line 13 import * is importing everything from modules
 
 #variables for server connection
 server = config.server
